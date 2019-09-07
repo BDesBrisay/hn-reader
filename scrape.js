@@ -11,19 +11,19 @@ const url = 'https://news.ycombinator.com';
   const text = await res.text();
   const $ = cheerio.load(text);
   let links = [];
-  let articles = [];
+  let titles = [];
 
   $('.title > a').each((i, item) => {
     links[i] = $(item).attr('href');
-    articles[i] = $(item).text();
+    titles[i] = $(item).text();
   });
 
   links.pop();
-  articles.pop();
+  titles.pop();
 
   const results = links.map((item, i) => ({
     link: links[i],
-    article: articles[i]
+    title: titles[i]
   }));
 
   console.log(results);

@@ -6,15 +6,19 @@
   </head>
   <body>
     <div class="header">
-      <button onclick="prev(localStorage, location)">
+      <h3 class="title">HN Reader</h3>
+      <button onclick="save(document.title)" id="save">
+        Save
+      </button>
+      <button onclick="prev(localStorage, location)" id="prev">
         Prev
       </button>
-      <h3 class="title">HN Reader</h3>
-      <button onclick="next(localStorage, location)">
+      <button onclick="next(localStorage, location)" id="next">
         Next
       </button>
     </div>
-    <iframe class="iframe"></iframe>
+    <iframe class="iframe" onload="onLoad()" onloadstart="onLoadStart()"></iframe>
+    <h3 class="loading">Loading...</h3>
   </body>
   <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="display.js"></script>
