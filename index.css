@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+.header {
+  height: 50px;
+  width: 100%;
+  background: #345;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.title {
+  margin: 0 12px;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.iframe {
+  width: 100%;
+  height: calc(100vh - 50px);
+}

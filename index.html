@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <title>HN Reader</title>
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="prev(localStorage, location)">
+        Prev
+      </button>
+      <h3 class="title">HN Reader</h3>
+      <button onclick="next(localStorage, location)">
+        Next
+      </button>
+    </div>
+    <iframe class="iframe"></iframe>
+  </body>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="display.js"></script>
+</html>
